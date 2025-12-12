@@ -1,0 +1,20 @@
+/**
+ * UI Elements Plugin - Admin Styles
+ */
+
+/* Make UI element fields span full width */
+.control-group.field-uielement-fullwidth {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+}
+
+/* Hide the label column for UI elements */
+.control-group.field-uielement-fullwidth .control-label {
+    display: none !important;
+}
+
+/* Make the controls take full width */
+.control-group.field-uielement-fullwidth .controls {
+    width: 100% !important;
+    margin-left: 0 !important;
+}

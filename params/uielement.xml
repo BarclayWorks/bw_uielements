@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fields name="fieldparams">
+        <fieldset name="fieldparams">
+            <!-- Element Type Selection -->
+            <field
+                name="element_type"
+                type="list"
+                label="PLG_FIELDS_BW_UIELEMENTS_ELEMENT_TYPE_LABEL"
+                description="PLG_FIELDS_BW_UIELEMENTS_ELEMENT_TYPE_DESC"
+                default="hr"
+                required="true"
+            >
+                <option value="hr">PLG_FIELDS_BW_UIELEMENTS_TYPE_HR</option>
+                <option value="heading">PLG_FIELDS_BW_UIELEMENTS_TYPE_HEADING</option>
+                <option value="infotext">PLG_FIELDS_BW_UIELEMENTS_TYPE_INFOTEXT</option>
+                <option value="spacer">PLG_FIELDS_BW_UIELEMENTS_TYPE_SPACER</option>
+                <option value="sectiondivider">PLG_FIELDS_BW_UIELEMENTS_TYPE_SECTIONDIVIDER</option>
+            </field>
+
+            <!-- HR Parameters -->
+            <field
+                name="linestyle"
+                type="list"
+                label="PLG_FIELDS_BW_UIELEMENTS_HR_LINESTYLE_LABEL"
+                description="PLG_FIELDS_BW_UIELEMENTS_HR_LINESTYLE_DESC"
+                default="solid"
+                showon="element_type:hr,sectiondivider"
+            >
+                <option value="solid">PLG_FIELDS_BW_UIELEMENTS_LINESTYLE_SOLID</option>
+                <option value="dashed">PLG_FIELDS_BW_UIELEMENTS_LINESTYLE_DASHED</option>
+                <option value="dotted">PLG_FIELDS_BW_UIELEMENTS_LINESTYLE_DOTTED</option>
+                <option value="double">PLG_FIELDS_BW_UIELEMENTS_LINESTYLE_DOUBLE</option>
+            </field>
+
+            <field
+                name="linecolor"
+                type="color"
+                label="PLG_FIELDS_BW_UIELEMENTS_HR_LINECOLOR_LABEL"
+                description="PLG_FIELDS_BW_UIELEMENTS_HR_LINECOLOR_DESC"
+                default="#dee2e6"
+                showon="element_type:hr,sectiondivider"
+            />
+
+            <field
+                name="lineweight"
+                type="number"
+                label="PLG_FIELDS_BW_UIELEMENTS_HR_LINEWEIGHT_LABEL"
+                description="PLG_FIELDS_BW_UIELEMENTS_HR_LINEWEIGHT_DESC"
+                default="1"
+                min="1"
+                max="10"
+                step="1"
+                showon="element_type:hr,sectiondivider"
+            />
+
+            <field
+                name="margintop"
+                type="number"
+                label="PLG_FIELDS_BW_UIELEMENTS_HR_MARGINTOP_LABEL"
+                description="PLG_FIELDS_BW_UIELEMENTS_HR_MARGINTOP_DESC"
+                default="1"
+                min="0"
+                max="10"
+                step="0.5"
+                showon="element_type:hr,sectiondivider"
+            />
+
+            <field
+                name="marginbottom"
+                type="number"
+                label="PLG_FIELDS_BW_UIELEMENTS_HR_MARGINBOTTOM_LABEL"
+                description="PLG_FIELDS_BW_UIELEMENTS_HR_MARGINBOTTOM_DESC"
+                default="1"
+                min="0"
+                max="10"
+                step="0.5"
+                showon="element_type:hr,sectiondivider"
+            />
+
+            <!-- Heading Parameters -->
+            <field
+                name="headinglevel"
+                type="list"
+                label="PLG_FIELDS_BW_UIELEMENTS_HEADING_LEVEL_LABEL"
+                description="PLG_FIELDS_BW_UIELEMENTS_HEADING_LEVEL_DESC"
+                default="h3"
+                showon="element_type:heading"
+            >
+                <option value="h1">H1</option>
+                <option value="h2">H2</option>
+                <option value="h3">H3</option>
+                <option value="h4">H4</option>
+                <option value="h5">H5</option>
+                <option value="h6">H6</option>
+            </field>
+
+            <field
+                name="headingclass"
+                type="text"
+                label="PLG_FIELDS_BW_UIELEMENTS_HEADING_CLASS_LABEL"
+                description="PLG_FIELDS_BW_UIELEMENTS_HEADING_CLASS_DESC"
+                default=""
+                showon="element_type:heading"
+            />
+
+            <field
+                name="headingstyle"
+                type="textarea"
+                label="PLG_FIELDS_BW_UIELEMENTS_HEADING_STYLE_LABEL"
+                description="PLG_FIELDS_BW_UIELEMENTS_HEADING_STYLE_DESC"
+                rows="3"
+                default=""
+                showon="element_type:heading"
+            />
+
+            <!-- Info Text Parameters -->
+            <field
+                name="alertstyle"
+                type="list"
+                label="PLG_FIELDS_BW_UIELEMENTS_INFOTEXT_ALERTSTYLE_LABEL"
+                description="PLG_FIELDS_BW_UIELEMENTS_INFOTEXT_ALERTSTYLE_DESC"
+                default="info"
+                showon="element_type:infotext"
+            >
+                <option value="primary">PLG_FIELDS_BW_UIELEMENTS_ALERTSTYLE_PRIMARY</option>
+                <option value="secondary">PLG_FIELDS_BW_UIELEMENTS_ALERTSTYLE_SECONDARY</option>
+                <option value="success">PLG_FIELDS_BW_UIELEMENTS_ALERTSTYLE_SUCCESS</option>
+                <option value="danger">PLG_FIELDS_BW_UIELEMENTS_ALERTSTYLE_DANGER</option>
+                <option value="warning">PLG_FIELDS_BW_UIELEMENTS_ALERTSTYLE_WARNING</option>
+                <option value="info">PLG_FIELDS_BW_UIELEMENTS_ALERTSTYLE_INFO</option>
+                <option value="light">PLG_FIELDS_BW_UIELEMENTS_ALERTSTYLE_LIGHT</option>
+                <option value="dark">PLG_FIELDS_BW_UIELEMENTS_ALERTSTYLE_DARK</option>
+            </field>
+
+            <field
+                name="showicon"
+                type="radio"
+                label="PLG_FIELDS_BW_UIELEMENTS_INFOTEXT_SHOWICON_LABEL"
+                description="PLG_FIELDS_BW_UIELEMENTS_INFOTEXT_SHOWICON_DESC"
+                default="1"
+                class="btn-group"
+                showon="element_type:infotext"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field
+                name="dismissible"
+                type="radio"
+                label="PLG_FIELDS_BW_UIELEMENTS_INFOTEXT_DISMISSIBLE_LABEL"
+                description="PLG_FIELDS_BW_UIELEMENTS_INFOTEXT_DISMISSIBLE_DESC"
+                default="0"
+                class="btn-group"
+                showon="element_type:infotext"
+            >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <!-- Spacer Parameters -->
+            <field
+                name="height"
+                type="number"
+                label="PLG_FIELDS_BW_UIELEMENTS_SPACER_HEIGHT_LABEL"
+                description="PLG_FIELDS_BW_UIELEMENTS_SPACER_HEIGHT_DESC"
+                default="1"
+                min="0"
+                max="20"
+                step="0.5"
+                showon="element_type:spacer"
+            />
+
+            <!-- Section Divider Parameters -->
+            <field
+                name="textposition"
+                type="list"
+                label="PLG_FIELDS_BW_UIELEMENTS_SECTIONDIVIDER_TEXTPOSITION_LABEL"
+                description="PLG_FIELDS_BW_UIELEMENTS_SECTIONDIVIDER_TEXTPOSITION_DESC"
+                default="center"
+                showon="element_type:sectiondivider"
+            >
+                <option value="center">PLG_FIELDS_BW_UIELEMENTS_TEXTPOSITION_CENTER</option>
+                <option value="above">PLG_FIELDS_BW_UIELEMENTS_TEXTPOSITION_ABOVE</option>
+            </field>
+
+            <field
+                name="textalign"
+                type="list"
+                label="PLG_FIELDS_BW_UIELEMENTS_SECTIONDIVIDER_TEXTALIGN_LABEL"
+                description="PLG_FIELDS_BW_UIELEMENTS_SECTIONDIVIDER_TEXTALIGN_DESC"
+                default="center"
+                showon="element_type:sectiondivider"
+            >
+                <option value="left">PLG_FIELDS_BW_UIELEMENTS_TEXTALIGN_LEFT</option>
+                <option value="center">PLG_FIELDS_BW_UIELEMENTS_TEXTALIGN_CENTER</option>
+                <option value="right">PLG_FIELDS_BW_UIELEMENTS_TEXTALIGN_RIGHT</option>
+            </field>
+        </fieldset>
+    </fields>
+</form>

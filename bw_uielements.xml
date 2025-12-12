@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="fields" method="upgrade">
+    <name>plg_fields_bw_uielements</name>
+    <author>Barclay.Works Ltd.</author>
+    <creationDate>2025-12</creationDate>
+    <copyright>(C) 2025 Barclay.Works Ltd. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <version>1.0.0</version>
+    <description>PLG_FIELDS_BW_UIELEMENTS_XML_DESCRIPTION</description>
+
+    <namespace path="src">Bw\Plugin\Fields\Uielements</namespace>
+
+    <files>
+        <folder plugin="bw_uielements">services</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+        <folder>params</folder>
+        <folder>layouts</folder>
+        <folder>language</folder>
+    </files>
+
+    <media folder="media" destination="plg_fields_bw_uielements">
+        <folder>css</folder>
+    </media>
+
+    <languages>
+        <language tag="en-GB">language/en-GB/plg_fields_bw_uielements.ini</language>
+        <language tag="en-GB">language/en-GB/plg_fields_bw_uielements.sys.ini</language>
+    </languages>
+
+    <updateservers>
+        <server type="extension" name="Barclay.Works Updates">https://www.barclay.works/updates/plugins/updates.xml</server>
+    </updateservers>
+</extension>
